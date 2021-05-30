@@ -1,0 +1,38 @@
+/* nav */
+
+.navbar {
+    text-transform: uppercase;
+}
+
+.navbar{
+    background: #444;
+}
+
+/**
+*footer
+*/
+
+.footer{
+    margin-bottom: 15px;
+    display: inline-block;
+    color: #444;
+}
+
+/**
+* Bulma overrides
+*/
+
+.input, .button{
+    border-radius:0;
+}
+
+/**
+* Product list itm
+*/
+.product-list-item .box .subtitle {
+    margin-bottom: 0;
+}
+
+.product-list-item .box  .price {
+    color: #888;
+}
