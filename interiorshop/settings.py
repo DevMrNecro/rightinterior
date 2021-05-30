@@ -137,5 +137,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 STATIC_ROOT = '/home/mrnecro/django_deploy/interiorshop/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
