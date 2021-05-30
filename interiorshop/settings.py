@@ -15,7 +15,7 @@ SECRET_KEY = '4@1dbdk2uzf+@abt1vefe1c26b-g!1&2ajy(q!40rzruoa41r8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['rightinterior.herokuapp.com','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['rightinterior.herokuapp.com','127.0.0.1']
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'vendor_admin'
