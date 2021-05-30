@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'apps.core',
     'apps.vendor',
     'apps.product',
@@ -89,6 +90,8 @@ DATABASES = {
 
 }
 
+prod_db  =  dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(prod_db)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -125,18 +128,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'static/')
-]
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'apps/core/static')]
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
-STATIC_ROOT = '/home/mrnecro/django_deploy/interiorshop/staticfiles/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+STATIC_ROOT = '/home/mrnecro/django_deploy/interiorshop/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
-prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
