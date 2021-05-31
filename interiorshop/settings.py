@@ -2,7 +2,7 @@ import os
 import django_heroku
 import dj_database_url 
 
-
+from decouple import config
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -11,10 +11,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '4@1dbdk2uzf+@abt1vefe1c26b-g!1&2ajy(q!40rzruoa41r8'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = ['rightinterior.herokuapp.com','127.0.0.1']
 
@@ -77,15 +77,15 @@ DATABASES = {
 
     'default': {
 
-        'ENGINE': 'devmrnecro',
+        'ENGINE': config('ENGINE'),
 
-        'NAME': 'venv_django_interiorshop',
+        'NAME': config('NAME'),
 
-        'USER': 'devmrnecro',
+        'USER': config('USER'),
 
-        'PASSWORD': '5799',
+        'PASSWORD': config('PASSWORD'),
 
-        'HOST': 'localhost,rightinterior.herokuapp.com',
+        'HOST': config('HOST'),
 
         'PORT': '',
 
