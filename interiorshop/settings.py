@@ -11,10 +11,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = '4@1dbdk2uzf+@abt1vefe1c26b-g!1&2ajy(q!40rzruoa41r8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG')
+DEBUG = False
 
 ALLOWED_HOSTS = ['rightinterior.herokuapp.com','127.0.0.1']
 
@@ -79,13 +79,13 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': config('DB_NAME'),
+        'NAME': 'venv_django_interiorshop',
 
-        'USER': config('DB_USER'),
+        'USER': 'devmrnecro',
 
-        'PASSWORD': config('DB_PASSWORD'),
+        'PASSWORD': '5799',
 
-        'HOST': config('DB_HOST'),
+        'HOST': 'localhost','rightinterior.herokuapp.com'
 
         'PORT': '',
 
