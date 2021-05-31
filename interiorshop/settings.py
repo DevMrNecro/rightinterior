@@ -14,7 +14,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = ['rightinterior.herokuapp.com','127.0.0.1']
 
@@ -79,13 +79,13 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'venv_django_interiorshop',
+        'NAME': config('DB_NAME'),
 
-        'USER': 'devmrnecro',
+        'USER': config('DB_USER'),
 
-        'PASSWORD': '5799',
+        'PASSWORD': config('DB_PASSWORD'),
 
-        'HOST': 'localhost','rightinterior.herokuapp.com'
+        'HOST': config('DB_HOST'),
 
         'PORT': '',
 
